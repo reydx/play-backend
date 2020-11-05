@@ -22,6 +22,11 @@ async def index():
     return {"rey": "to the earth"}
 
 
+@app.get("/home")
+async def home():
+    return {"rey": "home"}
+
+
 if __name__ == '__main__':
     # uvicorn.run(app='application:app', port=4000, host="0.0.0.0", reload=True, reload_dirs=".")
     uvicorn.run(app='application:app', port=4000, host="0.0.0.0", reload=True)
