@@ -29,7 +29,7 @@ async def home():
 
 @app.get("/")
 async def host():
-    return {"rey": "to the earth"}
+    return {"liuda": "to the earth"}
 
 
 if __name__ == '__main__':
