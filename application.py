@@ -17,11 +17,6 @@ app = FastAPI()
 url_prefix = "/api/v1"
 
 
-@app.get("")
-async def index():
-    return {"rey": "to the earth"}
-
-
 @app.get(url_prefix+"")
 async def api_index():
     return {"rey": "to the earth"}
@@ -30,6 +25,11 @@ async def api_index():
 @app.get("/home")
 async def home():
     return {"rey": "home"}
+
+
+@app.get("/")
+async def host():
+    return {"rey": "to the earth"}
 
 
 if __name__ == '__main__':
