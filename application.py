@@ -17,8 +17,13 @@ app = FastAPI()
 url_prefix = "/api/v1"
 
 
-@app.get(url_prefix+"")
+@app.get("")
 async def index():
+    return {"rey": "to the earth"}
+
+
+@app.get(url_prefix+"")
+async def api_index():
     return {"rey": "to the earth"}
 
 
