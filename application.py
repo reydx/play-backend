@@ -12,6 +12,8 @@ from __future__ import absolute_import
 import uvicorn
 from fastapi import FastAPI
 
+from settings import environment_settings
+
 app = FastAPI()
 
 url_prefix = "/api/v1"
@@ -29,7 +31,7 @@ async def home():
 
 @app.get("/")
 async def host():
-    return {"liuda": "to the earth"}
+    return {f"{environment_settings.env_name}": "to the earth"}
 
 
 if __name__ == '__main__':
