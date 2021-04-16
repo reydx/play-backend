@@ -3,5 +3,5 @@ COPY . /opt/play-backend
 WORKDIR /opt/play-backend
 RUN pip3 install -r requirements.txt
 ENV ENV_NAME=$ENV_NAME
-EXPOSE 5000
-CMD uvicorn application:app --host 0.0.0.0 --port 5000
+EXPOSE 80
+CMD uvicorn application:app --host 0.0.0.0 --port 80
